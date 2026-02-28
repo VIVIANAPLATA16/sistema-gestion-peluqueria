@@ -1,91 +1,77 @@
 import streamlit as st
-import sqlite3
 import pandas as pd
+import datetime
 
-# 1. Configuración de página de lujo
-st.set_page_config(page_title="GlamCode Luxury SaaS", page_icon="💎", layout="wide")
+# 1. Configuración Pro
+st.set_page_config(page_title="GlamCode Pro", layout="wide")
 
-# 2. Maquillaje Luxury (CSS Personalizado)
+# 2. CSS de Alto Nivel (Minimalismo Luxury)
 st.markdown("""
     <style>
-    /* Fondo principal oscuro */
-    .stApp {
-        background-color: #0E1117;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+    
+    html, body, [data-testid="stAppViewContainer"] {
+        background-color: #050505; /* Negro absoluto */
+        font-family: 'Inter', sans-serif;
     }
     
-    /* Títulos en Dorado */
-    h1, h2, h3 {
-        color: #D4AF37 !important; /* Dorado metálico */
-        font-family: 'Playfair Display', serif;
+    .stHeader { background: transparent; }
+
+    /* Tarjetas de cristal (Glassmorphism) */
+    .css-1r6p8d1, .stDataFrame {
+        border: 1px solid #1A1A1A;
+        border-radius: 15px;
+        background: #0A0A0A;
     }
-    
-    /* Botones Dorados */
+
+    /* Botón con degradado */
     .stButton>button {
-        background-color: #D4AF37 !important;
-        color: #000000 !important;
-        border-radius: 5px;
-        border: 1px solid #B8860B;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-    
-    .stButton>button:hover {
-        background-color: #000000 !important;
-        color: #D4AF37 !important;
-        border: 1px solid #D4AF37;
+        width: 100%;
+        background: linear-gradient(90deg, #D4AF37 0%, #F4D03F 100%);
+        color: black !important;
+        border: none;
+        padding: 15px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.3);
     }
 
-    /* Tablas y contenedores */
-    .stDataFrame {
-        border: 1px solid #D4AF37;
-        border-radius: 10px;
-    }
+    h1 { color: #FFFFFF; font-weight: 700; letter-spacing: -1px; }
+    h3 { color: #D4AF37; font-weight: 300; }
     
-    /* Sidebar oscura */
-    [data-testid="stSidebar"] {
-        background-color: #161B22;
-        border-right: 1px solid #D4AF37;
-    }
-
-    /* Texto blanco para legibilidad */
-    p, label {
-        color: #FFFFFF !important;
-    }
+    /* Input styling */
+    input { background-color: #111 !important; border-color: #333 !important; color: white !important; }
     </style>
     """, unsafe_allow_html=True)
 
-# 3. Encabezado de la Suite
-st.markdown("<h1 style='text-align: center;'>✨ GLAMCODE LUXURY SUITE</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; color: #D4AF37 !important;'>Software de Gestión Exclusiva para Salones de Alta Gama</p>", unsafe_allow_html=True)
+# 3. Interfaz
+st.markdown("<h1 style='text-align: left; font-size: 3rem;'>GlamCode <span style='color:#D4AF37'>OS</span></h1>", unsafe_allow_html=True)
 st.write("---")
 
-# 4. Estructura de Panel
-col1, col2 = st.columns([1, 2])
+col1, col2 = st.columns([1, 1.5], gap="large")
 
 with col1:
-    st.markdown("### 🏆 Registro Premium")
-    nombre = st.text_input("Nombre del Cliente")
-    servicio = st.selectbox("Servicio de Lujo", ["Corte Boutique", "Colorimetría Avanzada", "Spa Capilar Gold", "Barbería VIP"])
-    precio = st.number_input("Inversión ($)", min_value=0)
-    
-    if st.button("GUARDAR EN BASE DE DATOS"):
-        # Lógica de guardado (esto ya se conecta con tu peluquería.db)
-        st.balloons()
-        st.success(f"Servicio para {nombre} registrado en el sistema.")
+    st.markdown("### ⚡ NUEVO SERVICIO")
+    with st.form("registro_lujo"):
+        nombre = st.text_input("NOMBRE DEL CLIENTE", placeholder="Ej. Viviana Plata")
+        servicio = st.selectbox("CATEGORÍA", ["Corte Boutique", "Colorimetría Pro", "Tratamiento Diamond"])
+        valor = st.number_input("VALOR ($)", min_value=0, step=10000)
+        enviar = st.form_submit_button("REGISTRAR EN SISTEMA")
+        
+        if enviar:
+            st.toast("Guardado en la nube", icon="☁️")
 
 with col2:
-    st.markdown("### 📊 Control de Ingresos")
-    # Datos de prueba con estilo
-    data = {
-        "CLIENTE": ["Viviana Plata", "Empresario VIP", "Modelo Invitada"],
-        "SERVICIO": ["Diseño de Imagen", "Corte de Autor", "Tratamiento Gold"],
-        "VALOR": ["$150.000", "$95.000", "$210.000"]
-    }
-    df = pd.DataFrame(data)
-    st.table(df) # Usamos tabla para que se vea más limpio el dorado
+    st.markdown("### 📋 AGENDA DE HOY")
+    # Datos limpios
+    df = pd.DataFrame({
+        "Hora": ["10:00 AM", "11:30 AM", "02:00 PM"],
+        "Cliente": ["Viviana Plata", "Marta Gomez", "Carlos Ruiz"],
+        "Estado": ["✅ Confirmado", "⌛ Pendiente", "✅ Confirmado"]
+    })
+    st.table(df)
 
-st.sidebar.markdown("<h2 style='text-align: center;'>👑</h2>", unsafe_allow_html=True)
-st.sidebar.title("ADMINISTRACIÓN")
-st.sidebar.write("Bienvenida, Viviana.")
 st.sidebar.markdown("---")
-st.sidebar.info("Versión SaaS 2026 - Edición Limitada")
+st.sidebar.caption("SaaS para Peluquerías de Autor v.2.0")
