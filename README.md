@@ -15,6 +15,23 @@ Aplicación orientada a la gestión de clientes, servicios y citas para una pelu
 - Python
 - SQLite
 - Git
+  ## 🗄 Modelo de Base de Datos
+
+El sistema utiliza una base de datos relacional en SQLite con las siguientes tablas:
+
+- **clientes** (id, nombre, telefono)
+- **servicios** (id, nombre, precio)
+- **citas** (id, cliente_id, servicio_id, fecha)
+
+Las tablas están relacionadas mediante llaves foráneas para garantizar integridad de datos.
+
+## ▶️ Cómo ejecutar el proyecto
+
+1. Clonar el repositorio
+2. Ejecutar el archivo principal:
+
+```bash
+python main.py
 
 ## 👩‍💻 Autora
 Viviana Plata  
