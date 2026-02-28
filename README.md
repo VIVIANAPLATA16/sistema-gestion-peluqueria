@@ -21,3 +21,5 @@
 
 ## 👩‍💻 Autora
 **Viviana Plata** *Tecnóloga en Análisis y Desarrollo de Software (ADSO) - SENA* *Futura Ingeniera de Software (Diciembre 2026)*
+
+![Menú del Sistema](menu.png)
