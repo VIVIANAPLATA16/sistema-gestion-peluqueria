@@ -1,77 +1,53 @@
 import streamlit as st
 import pandas as pd
-import datetime
 
-# 1. Configuración Pro
-st.set_page_config(page_title="GlamCode Pro", layout="wide")
+st.set_page_config(page_title="GlamCode OS", page_icon="💎", layout="wide")
 
-# 2. CSS de Alto Nivel (Minimalismo Luxury)
 st.markdown("""
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
-    
-    html, body, [data-testid="stAppViewContainer"] {
-        background-color: #050505; /* Negro absoluto */
-        font-family: 'Inter', sans-serif;
-    }
-    
-    .stHeader { background: transparent; }
+<style>
+.stApp { background-color: #050505 !important; }
+.main-title {
+background: linear-gradient(90deg, #D4AF37, #F9E79F);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 3.5rem; font-weight: 700; text-align: center;
+}
+.card {
+background: rgba(255, 255, 255, 0.02);
+border: 1px solid rgba(212, 175, 55, 0.15);
+border-radius: 20px; padding: 25px; text-align: center;
+}
+.stButton>button {
+width: 100%; background: linear-gradient(90deg, #D4AF37, #B8860B) !important;
+color: black !important; border-radius: 50px !important; font-weight: 700;
+}
+#MainMenu, footer, header {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
 
-    /* Tarjetas de cristal (Glassmorphism) */
-    .css-1r6p8d1, .stDataFrame {
-        border: 1px solid #1A1A1A;
-        border-radius: 15px;
-        background: #0A0A0A;
-    }
-
-    /* Botón con degradado */
-    .stButton>button {
-        width: 100%;
-        background: linear-gradient(90deg, #D4AF37 0%, #F4D03F 100%);
-        color: black !important;
-        border: none;
-        padding: 15px;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.3);
-    }
-
-    h1 { color: #FFFFFF; font-weight: 700; letter-spacing: -1px; }
-    h3 { color: #D4AF37; font-weight: 300; }
-    
-    /* Input styling */
-    input { background-color: #111 !important; border-color: #333 !important; color: white !important; }
-    </style>
-    """, unsafe_allow_html=True)
-
-# 3. Interfaz
-st.markdown("<h1 style='text-align: left; font-size: 3rem;'>GlamCode <span style='color:#D4AF37'>OS</span></h1>", unsafe_allow_html=True)
+st.markdown('<h1 class="main-title">GLAMCODE OS</h1>', unsafe_allow_html=True)
 st.write("---")
 
-col1, col2 = st.columns([1, 1.5], gap="large")
+m1, m2, m3 = st.columns(3)
+with m1:
+st.markdown('<div class="card"><p style="color:#D4AF37;">INGRESOS</p><h2 style="color:white;">$ 1.250.000</h2></div>', unsafe_allow_html=True)
+with m2:
+st.markdown('<div class="card"><p style="color:#D4AF37;">CITAS</p><h2 style="color:white;">14</h2></div>', unsafe_allow_html=True)
+with m3:
+st.markdown('<div class="card"><p style="color:#D4AF37;">SISTEMA</p><h2 style="color:white;">ONLINE ✨</h2></div>', unsafe_allow_html=True)
 
-with col1:
-    st.markdown("### ⚡ NUEVO SERVICIO")
-    with st.form("registro_lujo"):
-        nombre = st.text_input("NOMBRE DEL CLIENTE", placeholder="Ej. Viviana Plata")
-        servicio = st.selectbox("CATEGORÍA", ["Corte Boutique", "Colorimetría Pro", "Tratamiento Diamond"])
-        valor = st.number_input("VALOR ($)", min_value=0, step=10000)
-        enviar = st.form_submit_button("REGISTRAR EN SISTEMA")
-        
-        if enviar:
-            st.toast("Guardado en la nube", icon="☁️")
+st.write("---")
 
-with col2:
-    st.markdown("### 📋 AGENDA DE HOY")
-    # Datos limpios
-    df = pd.DataFrame({
-        "Hora": ["10:00 AM", "11:30 AM", "02:00 PM"],
-        "Cliente": ["Viviana Plata", "Marta Gomez", "Carlos Ruiz"],
-        "Estado": ["✅ Confirmado", "⌛ Pendiente", "✅ Confirmado"]
-    })
-    st.table(df)
+col_f, col_t = st.columns([1, 1.8], gap="large")
 
-st.sidebar.markdown("---")
-st.sidebar.caption("SaaS para Peluquerías de Autor v.2.0")
+with col_f:
+st.markdown("<h3 style='color:#D4AF37;'>🖋️ REGISTRO VIP</h3>", unsafe_allow_html=True)
+nombre = st.text_input("NOMBRE")
+servicio = st.selectbox("SERVICIO", ["Corte Boutique", "Balayage Diamond", "Seda Capilar"])
+if st.button("CONFIRMAR"):
+st.balloons()
+
+with col_t:
+st.markdown("<h3 style='color:#D4AF37;'>📋 AGENDA HOY</h3>", unsafe_allow_html=True)
+datos = {"CLIENTE": ["Viviana Plata", "Carolina Herrera"], "SERVICIO": ["Corte", "Color"]}
+st.table(pd.DataFrame(datos))
