@@ -29,4 +29,4 @@ Aquí puedes ver cómo luce el sistema actualmente:
 - [ ] Módulo de facturación automática.
 
 ---
-Creado con ❤️ por **Viviana Plata** | Futura Ingeniera de Software (2026).
+Creado con ❤️ por **Viviana Plata** | Futura Ingeniera de Software.
