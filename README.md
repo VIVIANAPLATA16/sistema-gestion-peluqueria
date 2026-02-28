@@ -22,6 +22,7 @@ Aquí puedes ver cómo luce el sistema actualmente:
 - **Python 🐍**: Lenguaje principal para la lógica de negocio.
 - **JSON**: Almacenamiento de datos persistente.
 - **Licencia MIT**: Software abierto bajo estándares profesionales.
+- **SQLite 🗄️**: Implementación de base de datos relacional para mayor seguridad de los datos. 
 
 ## 📅 Hoja de Ruta (Roadmap)
 - [ ] Implementar base de datos SQLite.
