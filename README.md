@@ -1,40 +1,23 @@
 # 💇‍♀️ Sistema de Gestión para Peluquería
 
-Proyecto desarrollado como parte de mi formación en Análisis y Desarrollo de Software (ADSO) – SENA.
+¡Bienvenida al futuro de la administración estética! Este software está diseñado para organizar clientes, servicios y citas de forma eficiente, eliminando el papel y centralizando la información en una base de datos segura.
 
-## 📌 Descripción
-Aplicación orientada a la gestión de clientes, servicios y citas para una peluquería, permitiendo organizar la información y mejorar el control administrativo.
+## 🌟 Características Pro (CRUD Completo)
+* **Registrar:** Agrega clientes nuevos a la base de datos rápidamente.
+* **Listar:** Visualiza toda tu base de datos de clientes en segundos.
+* **Buscar:** Encuentra a cualquier cliente por su nombre para agilizar la atención.
+* **Editar:** Mantén la información actualizada (teléfonos, nombres).
+* **Eliminar:** Limpia registros antiguos o incorrectos con un solo ID.
 
-## 🚀 Funcionalidades
-- Registro de clientes
-- Gestión de servicios
-- Control de citas
-- Base de datos relacional
-- Validación de datos (nombres, teléfonos y fechas)
--Eliminación de registros (Clientes y Citas) 
+## 🛠️ Tecnologías Utilizadas
+* **Lenguaje:** Python 3
+* **Base de Datos:** SQLite3 (Relacional)
+* **Arquitectura:** Modular (Separación de lógica, base de datos y menú)
 
-## 🛠 Tecnologías utilizadas
-- Python
-- SQLite
-- Git
-  ## 🗄 Modelo de Base de Datos
-
-El sistema utiliza una base de datos relacional en SQLite con las siguientes tablas:
-
-- **clientes** (id, nombre, telefono)
-- **servicios** (id, nombre, precio)
-- **citas** (id, cliente_id, servicio_id, fecha)
-
-Las tablas están relacionadas mediante llaves foráneas para garantizar integridad de datos.
-
-## ▶️ Cómo ejecutar el proyecto
-
-1. Clonar el repositorio
-2. Ejecutar el archivo principal:
-
-```bash
-python main.py
+## 📁 Estructura del Proyecto
+* `main.py`: Punto de entrada con el menú interactivo.
+* `logica.py`: El "cerebro" que procesa los datos.
+* `database.py`: Gestión técnica de la base de datos SQL.
 
 ## 👩‍💻 Autora
-Viviana Plata  
-Tecnólogo en Análisis y Desarrollo de Software – SENA
+**Viviana Plata** *Tecnóloga en Análisis y Desarrollo de Software (ADSO) - SENA* *Futura Ingeniera de Software (Diciembre 2026)*
