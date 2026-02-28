@@ -1,30 +1,28 @@
-# 💇‍♀️ Sistema de Gestión Profesional - Peluquería 
+# ✂️ Sistema de Gestión Profesional - Peluquería
+> "Innovación tecnológica para el sector de la belleza." 🚀
 
-¡Bienvenida al futuro de la administración estética! Este software centraliza la información de clientes, servicios y citas en una base de datos segura, eliminando procesos manuales y optimizando el tiempo de atención.
+Este software es una solución integral para la administración de centros de estética, diseñado para optimizar el registro de servicios y la base de datos de clientes. Desarrollado como parte de mi formación en **Tecnología en Desarrollo de Software**.
 
-## 🚀 Vista Previa del Sistema
+## 📸 Vista Previa
+Aquí puedes ver cómo luce el sistema actualmente:
 
-### 🖥️ Interfaz Gráfica Moderna
-Gestión visual e intuitiva desarrollada para usuarios finales.
-![Interfaz Gráfica](interfaz_real.png)
+![Menú Principal](recursos/menú.png)
+*Interfaz de usuario en desarrollo.*
 
-### 💻 Control por Consola
-Acceso técnico mediante terminal interactiva para administración rápida.
-![Menú Terminal](menu.png)
+## 📁 Estructura del Sistema
+- **`origen/`**: El cerebro del programa (Lógica e Interfaz).
+- **`datos/`**: Donde se guarda toda la información de forma segura.
+- **`recursos/`**: Imágenes y elementos visuales del proyecto.
 
-## 🌟 Funcionalidades Principales (CRUD)
-* **Registrar:** Alta inmediata de nuevos clientes.
-* **Listar:** Visualización completa de la base de datos en tiempo real.
-* **Buscar:** Filtros rápidos por nombre para agilizar la atención.
-* **Editar/Eliminar:** Control total sobre la integridad de los datos.
+## 🛠️ Tecnologías
+- **Python 🐍**: Lenguaje principal para la lógica de negocio.
+- **JSON**: Almacenamiento de datos persistente.
+- **Licencia MIT**: Software abierto bajo estándares profesionales.
 
-## 🛠️ Stack Tecnológico
-* **Lenguaje:** Python 3.10+
-* **Interfaz (GUI):** Tkinter (Librería nativa de Python)
-* **Base de Datos:** SQLite3 (Motor relacional ligero y eficiente)
-* **Arquitectura:** Modular (Separación de Lógica, DB e Interfaz)
+## 📅 Hoja de Ruta (Roadmap)
+- [ ] Implementar base de datos SQLite.
+- [ ] Mejorar la interfaz visual con CustomTkinter.
+- [ ] Módulo de facturación automática.
 
-## 👩‍💻 Autora
-**Viviana Plata**
-*Tecnóloga en Análisis y Desarrollo de Software (ADSO - SENA)*
-*Futura Ingeniera de Software*
+---
+Creado con ❤️ por **Viviana Plata** | Futura Ingeniera de Software (2026).
