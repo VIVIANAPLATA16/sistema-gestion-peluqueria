@@ -10,6 +10,8 @@ Aplicación orientada a la gestión de clientes, servicios y citas para una pelu
 - Gestión de servicios
 - Control de citas
 - Base de datos relacional
+- Validación de datos (nombres, teléfonos y fechas)
+-Eliminación de registros (Clientes y Citas) 
 
 ## 🛠 Tecnologías utilizadas
 - Python
