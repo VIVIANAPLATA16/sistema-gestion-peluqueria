@@ -9,6 +9,10 @@ Aquí puedes ver cómo luce el sistema actualmente:
 ![Menú Principal](https://github.com/VIVIANAPLATA16/sistema-gestion-peluqueria/blob/main/recursos/menu.png?raw=true)
 *Interfaz de usuario en desarrollo.*
 
+### 📝 Registro y Control
+![Registro de Datos](recursos/interfaz_real.png)
+*Módulo de captura de datos y confirmación de guardado.*
+
 ## 📁 Estructura del Sistema
 - **`origen/`**: El cerebro del programa (Lógica e Interfaz).
 - **`datos/`**: Donde se guarda toda la información de forma segura.
