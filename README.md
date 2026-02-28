@@ -6,7 +6,7 @@ Este software es una solución integral para la administración de centros de es
 ## 📸 Vista Previa
 Aquí puedes ver cómo luce el sistema actualmente:
 
-![Menú Principal](recursos/menú.png)
+![Menú Principal](https://github.com/VIVIANAPLATA16/sistema-gestion-peluqueria/blob/main/recursos/menu.png?raw=true)
 *Interfaz de usuario en desarrollo.*
 
 ## 📁 Estructura del Sistema
