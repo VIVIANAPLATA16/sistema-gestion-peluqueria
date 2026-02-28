@@ -2,6 +2,9 @@
 
 ¡Bienvenida al futuro de la administración estética! Este software está diseñado para organizar clientes, servicios y citas de forma eficiente, eliminando el papel y centralizando la información en una base de datos segura.
 
+## 📸 Vista del Sistema
+![Menú del Sistema](menu.png)
+
 ## 🌟 Características Pro (CRUD Completo)
 * **Registrar:** Agrega clientes nuevos a la base de datos rápidamente.
 * **Listar:** Visualiza toda tu base de datos de clientes en segundos.
@@ -21,5 +24,3 @@
 
 ## 👩‍💻 Autora
 **Viviana Plata** *Tecnóloga en Análisis y Desarrollo de Software (ADSO) - SENA* *Futura Ingeniera de Software (Diciembre 2026)*
-
-![Menú del Sistema](menu.png)
